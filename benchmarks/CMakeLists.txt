@@ -1,0 +1,3 @@
+add_executable(static_vector_benchmark static_vector_benchmark.cpp)
+target_include_directories(static_vector_benchmark PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(static_vector_benchmark PRIVATE benchmark::benchmark)

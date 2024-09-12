@@ -6,6 +6,7 @@ project(static_vector VERSION 1.0 LANGUAGES CXX)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_BUILD_TYPE Release)
 
 # Include directories
 include_directories(${PROJECT_SOURCE_DIR}/include)
@@ -20,3 +21,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-maybe-uninitialized")
 include(cmake/googletest.cmake)
 enable_testing()
 add_subdirectory(tests)
+
+# Add Google benchmark
+include(cmake/googlebenchmark.cmake)
+add_subdirectory(benchmarks)
